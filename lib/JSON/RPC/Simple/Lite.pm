@@ -96,7 +96,16 @@ sub create_request {
 		"params"  => \@params,
 	};
 
-	my $json = encode_json($hash);
+	my $obj = JSON::PP->new();
+
+	# If we're doing unit testing we need the JSON output to be consistent.
+	# Specifying canonical = 1 makes the JSON output in alphabetical order.
+	# This adds overhead though, so we only enable it for unit testing.
+	if ($ENV{'HARNESS_ACTIVE'}) {
+		my $ok = $obj->canonical([1]);
+	}
+
+	my $json = $obj->encode($hash);
 
 	return $json;
 }
