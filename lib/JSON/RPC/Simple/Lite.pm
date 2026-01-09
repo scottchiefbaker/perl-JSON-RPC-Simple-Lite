@@ -102,7 +102,7 @@ sub create_request {
 	# Specifying canonical = 1 makes the JSON output in alphabetical order.
 	# This adds overhead though, so we only enable it for unit testing.
 	if ($ENV{'HARNESS_ACTIVE'}) {
-		my $ok = $obj->canonical([1]);
+		my $ok = $obj->canonical(1);
 	}
 
 	my $json = $obj->encode($hash);
