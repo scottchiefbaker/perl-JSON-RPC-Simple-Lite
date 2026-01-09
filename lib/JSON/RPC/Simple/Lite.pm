@@ -1,8 +1,11 @@
 package JSON::RPC::Client::Lite;
+
 use vars '$AUTOLOAD';
 use HTTP::Tiny;
 use JSON::PP;
 use Time::HiRes qw(time);
+
+our $VERSION = '0.1';
 
 sub new {
 	my $class = shift();
@@ -15,7 +18,7 @@ sub new {
 	};
 
 	my $self  = {
-		"version"     => 0.1,
+		"version"     => $version,
 		"api_url"     => $url,
 		"opts"        => $opts,
 		"http"        => HTTP::Tiny->new(%$attrs),
