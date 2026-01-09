@@ -1,4 +1,4 @@
-package JSON::RPC::Client::Lite;
+package JSON::RPC::Simple::Lite;
 
 use vars '$AUTOLOAD';
 use HTTP::Tiny;
@@ -13,7 +13,7 @@ sub new {
 	my $opts  = shift();
 
 	my $attrs = {
-		'agent'   => 'JSONRPC::Client::Lite',
+		'agent'   => 'JSON::RPC::Simple::Lite',
 		'timeout' => 45,
 	};
 
@@ -151,7 +151,7 @@ interfaces that library does.
 
   my $api_url = "https://www.perturb.org/api/json-rpc/";
   my $opts    = { debug => 0 };
-  my $json    = new JSON::RPC::Client::Lite($api_url, $opts);
+  my $json    = new JSON::RPC::Simple::Lite($api_url, $opts);
 
   # Direct using _call()
   my $resp = $json->_call($method, @params);

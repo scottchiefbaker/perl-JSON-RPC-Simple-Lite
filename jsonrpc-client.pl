@@ -44,7 +44,7 @@ if (!$method || !$api_url) {
 	die(usage());
 }
 
-my $s = new JSON::RPC::Client::Lite($api_url,{debug => $debug});
+my $s = new JSON::RPC::Simple::Lite($api_url,{debug => $debug});
 
 if (!@params) {
 	#@params = undef;
