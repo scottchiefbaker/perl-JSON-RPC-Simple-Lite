@@ -25,7 +25,7 @@ my $str = $json->echo_data("Hello world!");
 my $num = $json->math->sum(1, 4);
 
 # Get the curl command for this call
-my $curl_str = $json->_call($method, @params);
+my $curl_str = $json->curl_call($method, @params);
 ```
 
 # FUNCTIONS
