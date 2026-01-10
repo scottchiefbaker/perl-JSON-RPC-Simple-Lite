@@ -10,21 +10,23 @@ interfaces that library does.
 
 # USAGE
 
-    JSON::RPC::Simple::Lite;
+```perl
+JSON::RPC::Simple::Lite;
 
-    my $api_url = "https://www.perturb.org/api/json-rpc/";
-    my $opts    = { debug => 0 };
-    my $json    = JSON::RPC::Simple::Lite->new($api_url, $opts);
+my $api_url = "https://www.perturb.org/api/json-rpc/";
+my $opts    = { debug => 0 };
+my $json    = JSON::RPC::Simple::Lite->new($api_url, $opts);
 
-    # Direct using _call()
-    my $resp = $json->_call($method, @params);
+# Direct using _call()
+my $resp = $json->_call($method, @params);
 
-    # OOP style using chaining and AUTOLOAD magic
-    my $str = $json->echo_data("Hello world!");
-    my $pi  = $json->math->sum(1, 4);
+# OOP style using chaining and AUTOLOAD magic
+my $str = $json->echo_data("Hello world!");
+my $pi  = $json->math->sum(1, 4);
 
-    # Get the curl command for this call
-    my $curl_str = $json->_call($method, @params);
+# Get the curl command for this call
+my $curl_str = $json->_call($method, @params);
+```
 
 # FUNCTIONS
 
@@ -44,7 +46,9 @@ can be useful for debugging and testing.
 This allows you to chain calls in different namespaces together which gets
 mapped to the correct method name before calling.
 
-    $json->user->email->login($user, $pass); # Maps to method 'user.email.login'
+```perl
+$json->user->email->login($user, $pass); # Maps to method 'user.email.login'
+```
 
 This format can make your code cleaner and easier to read.
 
