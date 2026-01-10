@@ -36,7 +36,7 @@ the response from the server.
 ## curl\_call($method, @params)
 
 Returns a string that represents a Curl call of the `$method`. This
-can be useful for debugging and testing
+can be useful for debugging and testing.
 
 # OBJECT ORIENTED INTERFACE
 
@@ -49,8 +49,8 @@ mapped to the correct method name before calling.
 This format can make your code cleaner and easier to read.
 
 **Note:** This does require that
-your final method include **some** parameter. If your function doesn't require
-params pass `undef` in your params.
+your final method include **some** parameter. If your function does not require
+any params pass `undef` or use the explicit `_call()` method.
 
 # DEBUG
 
