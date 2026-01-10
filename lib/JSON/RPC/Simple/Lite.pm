@@ -167,7 +167,7 @@ interfaces that library does.
 
   # OOP style using chaining and AUTOLOAD magic
   my $str = $json->echo_data("Hello world!");
-  my $pi  = $json->math->sum(1, 4);
+  my $num = $json->math->sum(1, 4);
 
   # Get the curl command for this call
   my $curl_str = $json->_call($method, @params);
