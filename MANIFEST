@@ -1,7 +1,8 @@
-JSON-RPC-Simple-Lite-0.1/META.json
-JSON-RPC-Simple-Lite-0.1/META.yml
+MYMETA.json
+MYMETA.yml
 jsonrpc-client.pl
 lib/JSON/RPC/Simple/Lite.pm
 Makefile.PL
-MANIFEST			This list of files
+MANIFEST
 README.md
+t/01-general.t
