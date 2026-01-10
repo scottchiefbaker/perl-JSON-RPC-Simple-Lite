@@ -160,7 +160,7 @@ interfaces that library does.
 
   my $api_url = "https://www.perturb.org/api/json-rpc/";
   my $opts    = { debug => 0 };
-  my $json    = new JSON::RPC::Simple::Lite($api_url, $opts);
+  my $json    = JSON::RPC::Simple::Lite->new($api_url, $opts);
 
   # Direct using _call()
   my $resp = $json->_call($method, @params);

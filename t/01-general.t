@@ -15,7 +15,7 @@ use JSON::RPC::Simple::Lite;
 
 my $api_url = "https://www.perturb.org/api/json-rpc/";
 my $opts    = { debug => 0 };
-my $json    = new JSON::RPC::Simple::Lite($api_url, $opts);
+my $json    = JSON::RPC::Simple::Lite->new($api_url, $opts);
 
 is($json->create_request("foo"             , (1,2,3))   , '{"id":1,"method":"foo","params":[1,2,3],"version":1.1}');
 is($json->create_request("bar"             ,())         , '{"id":1,"method":"bar","params":[],"version":1.1}');
