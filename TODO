@@ -1,1 +1,2 @@
 * Basic HTTP user authentication
+* Add a last() method to get information about the last call (similar to debug())
