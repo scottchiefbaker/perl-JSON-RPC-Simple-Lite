@@ -37,8 +37,8 @@ the response from the server.
 
 ## curl\_call($method, @params)
 
-Returns a string that represents a Curl call of the `$method`. This
-can be useful for debugging and testing.
+Returns a string that represents a command line Curl call of `$method`.
+This can be useful for debugging and testing.
 
 # OBJECT ORIENTED INTERFACE
 

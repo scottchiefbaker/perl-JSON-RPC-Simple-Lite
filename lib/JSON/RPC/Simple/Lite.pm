@@ -181,8 +181,8 @@ the response from the server.
 
 =head2 curl_call($method, @params)
 
-Returns a string that represents a Curl call of the C<$method>. This
-can be useful for debugging and testing.
+Returns a string that represents a command line Curl call of C<$method>.
+This can be useful for debugging and testing.
 
 =head1 OBJECT ORIENTED INTERFACE
 
